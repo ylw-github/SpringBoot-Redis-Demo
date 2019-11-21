@@ -20,6 +20,13 @@ public class IndexController {
         return "success";
     }
 
+    @RequestMapping("/setStringTransactional")
+    public String setStringTransactional(String key, String value) {
+        redisService.setStringTransactoin(key, value);
+        return "success";
+    }
+
+
     @RequestMapping("/getString")
     public String getString(String key) {
         return redisService.getString(key);
@@ -33,4 +40,5 @@ public class IndexController {
         redisService.setSet("setTest", set);
         return "success";
     }
+
 }
