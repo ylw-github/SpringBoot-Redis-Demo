@@ -1,9 +1,9 @@
 spring:
   redis:
     database: 0
-    host: 192.168.162.130
-    port: 6379
-    password: 123
+    #    host: 132.232.44.194
+    #    port: 6379
+    #    password: 123456
     jedis:
       pool:
         max-active: 8
@@ -11,3 +11,11 @@ spring:
         max-idle: 8
         min-idle: 0
     timeout: 10000
+    cluster:
+      nodes:
+        - 192.168.162.131:9001
+        - 192.168.162.131:9002
+        - 192.168.162.131:9003
+        - 192.168.162.131:9004
+        - 192.168.162.131:9005
+        - 192.168.162.131:9006
